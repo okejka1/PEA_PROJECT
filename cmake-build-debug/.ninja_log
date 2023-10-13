@@ -1,0 +1,19 @@
+# ninja log v5
+0	2126	7189280107817360	CMakeFiles/PEA.dir/main.cpp.obj	99e0bdd1fa24b00d
+2130	2557	7189280112094901	PEA.exe	2c6d8e1bdb2ab287
+4	2127	7189296058972343	CMakeFiles/PEA.dir/main.cpp.obj	99e0bdd1fa24b00d
+81	2190	7189296059601972	CMakeFiles/PEA.dir/utils/Timer.cpp.obj	7d96dbf30ba7c50c
+198	3536	7189296073071147	CMakeFiles/PEA.dir/testers/Tester.cpp.obj	3ab166b95c3db21c
+315	3750	7189296075207397	CMakeFiles/PEA.dir/Menu.cpp.obj	9306fcf0fcd8b3a0
+2127	4739	7189296085109862	CMakeFiles/PEA.dir/algorithm/TPS.cpp.obj	45d941059e434a11
+256	5567	7189296093392244	CMakeFiles/PEA.dir/testers/AutomaticTester.cpp.obj	32531321cf0693f1
+140	7398	7189296111682628	CMakeFiles/PEA.dir/structures/Graph.cpp.obj	fb512a02ae168032
+7399	7866	7189296116322554	PEA.exe	20eed6581c1f72cb
+4	2118	7189296737934333	CMakeFiles/PEA.dir/Menu.cpp.obj	9306fcf0fcd8b3a0
+2118	2511	7189296741822264	PEA.exe	20eed6581c1f72cb
+6	2334	7189321346060666	CMakeFiles/PEA.dir/main.cpp.obj	99e0bdd1fa24b00d
+153	3515	7189321357898423	CMakeFiles/PEA.dir/testers/Tester.cpp.obj	3ab166b95c3db21c
+88	7164	7189321394353222	CMakeFiles/PEA.dir/structures/Graph.cpp.obj	fb512a02ae168032
+4	2364	7189321680005659	CMakeFiles/PEA.dir/main.cpp.obj	99e0bdd1fa24b00d
+80	2870	7189321685072690	CMakeFiles/PEA.dir/Menu.cpp.obj	9306fcf0fcd8b3a0
+2870	3454	7189321690846686	PEA.exe	20eed6581c1f72cb
