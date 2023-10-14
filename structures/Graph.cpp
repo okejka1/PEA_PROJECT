@@ -33,12 +33,20 @@ Graph::~Graph() {
 }
 
 void Graph::readGraphDirected(std::string s, int size) {
-    std::string name = R"(C:\Users\User\CLionProjects\PEA\input\)" + s;
+    std::string name = R"(C:\Users\antek\Desktop\studia\5.sem\Pea\projekt1\input\)" + s;
     std::ifstream file(name);
     if(file.is_open()) {
         std::string line;
         std::vector<int> lineData;
         int i = 0;
+        /*
+         * becasue every file has 7 lines at the beginning which do not contain information about costs
+         */
+        for(int j = 0; j < 7; j++) {
+            std::getline(file, line);
+            std::cout << line << std::endl;
+        }
+
         while(std::getline(file, line)){
             std::stringstream lineStream(line);
             int value;
@@ -51,6 +59,7 @@ void Graph::readGraphDirected(std::string s, int size) {
             }
 
         }
+
         file.close();
     }
     else std::cout << "\nTHERE WAS A PROBLEM WITH OPENING FILE";
