@@ -1,3 +1,3 @@
 CMakeFiles/PEA.dir/testers/AutomaticTester.cpp.obj: \
- C:\Users\antek\Desktop\studia\5.sem\Pea\projekt1\testers\AutomaticTester.cpp \
- C:\Users\antek\Desktop\studia\5.sem\Pea\projekt1\testers\AutomaticTester.h
+ G:\PEA_PROJECT\testers\AutomaticTester.cpp \
+ G:\PEA_PROJECT\testers\AutomaticTester.h

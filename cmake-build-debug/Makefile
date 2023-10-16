@@ -56,10 +56,10 @@ RM = "C:\Program Files\JetBrains\CLion 2022.3.3\bin\cmake\win\x64\bin\cmake.exe"
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\antek\Desktop\studia\5.sem\Pea\projekt1
+CMAKE_SOURCE_DIR = G:\PEA_PROJECT
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\antek\Desktop\studia\5.sem\Pea\projekt1\cmake-build-debug
+CMAKE_BINARY_DIR = G:\PEA_PROJECT\cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -86,9 +86,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\antek\Desktop\studia\5.sem\Pea\projekt1\cmake-build-debug\CMakeFiles C:\Users\antek\Desktop\studia\5.sem\Pea\projekt1\cmake-build-debug\\CMakeFiles\progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start G:\PEA_PROJECT\cmake-build-debug\CMakeFiles G:\PEA_PROJECT\cmake-build-debug\\CMakeFiles\progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\antek\Desktop\studia\5.sem\Pea\projekt1\cmake-build-debug\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start G:\PEA_PROJECT\cmake-build-debug\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -152,29 +152,29 @@ Menu.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\PEA.dir\build.make CMakeFiles/PEA.dir/Menu.cpp.s
 .PHONY : Menu.cpp.s
 
-algorithm/TPS.obj: algorithm/TPS.cpp.obj
-.PHONY : algorithm/TPS.obj
+algorithm/BruteForce.obj: algorithm/BruteForce.cpp.obj
+.PHONY : algorithm/BruteForce.obj
 
 # target to build an object file
-algorithm/TPS.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\PEA.dir\build.make CMakeFiles/PEA.dir/algorithm/TPS.cpp.obj
-.PHONY : algorithm/TPS.cpp.obj
+algorithm/BruteForce.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\PEA.dir\build.make CMakeFiles/PEA.dir/algorithm/BruteForce.cpp.obj
+.PHONY : algorithm/BruteForce.cpp.obj
 
-algorithm/TPS.i: algorithm/TPS.cpp.i
-.PHONY : algorithm/TPS.i
+algorithm/BruteForce.i: algorithm/BruteForce.cpp.i
+.PHONY : algorithm/BruteForce.i
 
 # target to preprocess a source file
-algorithm/TPS.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\PEA.dir\build.make CMakeFiles/PEA.dir/algorithm/TPS.cpp.i
-.PHONY : algorithm/TPS.cpp.i
+algorithm/BruteForce.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\PEA.dir\build.make CMakeFiles/PEA.dir/algorithm/BruteForce.cpp.i
+.PHONY : algorithm/BruteForce.cpp.i
 
-algorithm/TPS.s: algorithm/TPS.cpp.s
-.PHONY : algorithm/TPS.s
+algorithm/BruteForce.s: algorithm/BruteForce.cpp.s
+.PHONY : algorithm/BruteForce.s
 
 # target to generate assembly for a file
-algorithm/TPS.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\PEA.dir\build.make CMakeFiles/PEA.dir/algorithm/TPS.cpp.s
-.PHONY : algorithm/TPS.cpp.s
+algorithm/BruteForce.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\PEA.dir\build.make CMakeFiles/PEA.dir/algorithm/BruteForce.cpp.s
+.PHONY : algorithm/BruteForce.cpp.s
 
 main.obj: main.cpp.obj
 .PHONY : main.obj
@@ -308,9 +308,9 @@ help:
 	@echo ... Menu.obj
 	@echo ... Menu.i
 	@echo ... Menu.s
-	@echo ... algorithm/TPS.obj
-	@echo ... algorithm/TPS.i
-	@echo ... algorithm/TPS.s
+	@echo ... algorithm/BruteForce.obj
+	@echo ... algorithm/BruteForce.i
+	@echo ... algorithm/BruteForce.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

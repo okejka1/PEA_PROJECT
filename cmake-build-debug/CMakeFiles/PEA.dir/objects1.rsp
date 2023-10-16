@@ -1,1 +1,1 @@
-CMakeFiles/PEA.dir/main.cpp.obj CMakeFiles/PEA.dir/utils/Timer.cpp.obj CMakeFiles/PEA.dir/structures/Graph.cpp.obj CMakeFiles/PEA.dir/algorithm/TPS.cpp.obj CMakeFiles/PEA.dir/Menu.cpp.obj CMakeFiles/PEA.dir/testers/AutomaticTester.cpp.obj CMakeFiles/PEA.dir/testers/Tester.cpp.obj
+CMakeFiles/PEA.dir/main.cpp.obj CMakeFiles/PEA.dir/utils/Timer.cpp.obj CMakeFiles/PEA.dir/structures/Graph.cpp.obj CMakeFiles/PEA.dir/algorithm/BruteForce.cpp.obj CMakeFiles/PEA.dir/Menu.cpp.obj CMakeFiles/PEA.dir/testers/AutomaticTester.cpp.obj CMakeFiles/PEA.dir/testers/Tester.cpp.obj

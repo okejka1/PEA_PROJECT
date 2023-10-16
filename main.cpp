@@ -1,28 +1,24 @@
 #include <iostream>
 #include "Menu.h"
 #include "structures/Graph.h"
-#include "algorithm/TPS.h"
+#include "algorithm/BruteForce.h"
 
 using namespace std;
 
 int main() {
-    //Graph siema(403);
-    //siema.readGraphDirected("rbg403.atsp", 403);
-    //siema.display();
-    Graph test(5);
-    test.readGraphDirected("test.atsp", 5);
-    //test.display();
-    TPS t;
-    vector<int> path;
-    vector<bool> visited(5, false);
+
+    Graph test(4);
+    test.readGraphDirected("test2.atsp", 4);
+    test.display();
+    BruteForce t(test);
 
     int starting_city = 0;
-    path.push_back(starting_city);
-    visited[starting_city] = true;
+    //path.push_back(starting_city);
 
-    int min_cost = t.bruteForce(test, path, visited, starting_city, 5, 0);
+    int min_cost = t.ATSPBruteForce(test, starting_city);
 
     cout << "Minimum cost of TSP: " << min_cost << endl;
+    t.print();
 //    Menu::show();
     return 0;
 }

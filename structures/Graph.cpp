@@ -33,7 +33,7 @@ Graph::~Graph() {
 }
 
 void Graph::readGraphDirected(std::string s, int size) {
-    std::string name = R"(C:\Users\antek\Desktop\studia\5.sem\Pea\projekt1\input\)" + s;
+    std::string name = R"(G:\PEA_PROJECT\input\)" + s;
     std::ifstream file(name);
     if(file.is_open()) {
         std::string line;

@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/antek/Desktop/studia/5.sem/Pea/projekt1
+# Install script for directory: G:/PEA_PROJECT
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "C:/Users/antek/Desktop/studia/5.sem/Pea/projekt1/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "G:/PEA_PROJECT/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
