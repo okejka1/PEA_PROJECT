@@ -56,10 +56,10 @@ RM = "C:\Program Files\JetBrains\CLion 2022.3.3\bin\cmake\win\x64\bin\cmake.exe"
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = G:\PEA_PROJECT
+CMAKE_SOURCE_DIR = C:\Users\antek\Desktop\studia\5.sem\PEA_PROJECT
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = G:\PEA_PROJECT\cmake-build-debug
+CMAKE_BINARY_DIR = C:\Users\antek\Desktop\studia\5.sem\PEA_PROJECT\cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -86,9 +86,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start G:\PEA_PROJECT\cmake-build-debug\CMakeFiles G:\PEA_PROJECT\cmake-build-debug\\CMakeFiles\progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\antek\Desktop\studia\5.sem\PEA_PROJECT\cmake-build-debug\CMakeFiles C:\Users\antek\Desktop\studia\5.sem\PEA_PROJECT\cmake-build-debug\\CMakeFiles\progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start G:\PEA_PROJECT\cmake-build-debug\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\antek\Desktop\studia\5.sem\PEA_PROJECT\cmake-build-debug\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -127,30 +127,6 @@ PEA: cmake_check_build_system
 PEA/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\PEA.dir\build.make CMakeFiles/PEA.dir/build
 .PHONY : PEA/fast
-
-Menu.obj: Menu.cpp.obj
-.PHONY : Menu.obj
-
-# target to build an object file
-Menu.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\PEA.dir\build.make CMakeFiles/PEA.dir/Menu.cpp.obj
-.PHONY : Menu.cpp.obj
-
-Menu.i: Menu.cpp.i
-.PHONY : Menu.i
-
-# target to preprocess a source file
-Menu.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\PEA.dir\build.make CMakeFiles/PEA.dir/Menu.cpp.i
-.PHONY : Menu.cpp.i
-
-Menu.s: Menu.cpp.s
-.PHONY : Menu.s
-
-# target to generate assembly for a file
-Menu.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\PEA.dir\build.make CMakeFiles/PEA.dir/Menu.cpp.s
-.PHONY : Menu.cpp.s
 
 algorithm/BruteForce.obj: algorithm/BruteForce.cpp.obj
 .PHONY : algorithm/BruteForce.obj
@@ -248,29 +224,29 @@ testers/AutomaticTester.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\PEA.dir\build.make CMakeFiles/PEA.dir/testers/AutomaticTester.cpp.s
 .PHONY : testers/AutomaticTester.cpp.s
 
-testers/Tester.obj: testers/Tester.cpp.obj
-.PHONY : testers/Tester.obj
+utils/FileRandomizer.obj: utils/FileRandomizer.cpp.obj
+.PHONY : utils/FileRandomizer.obj
 
 # target to build an object file
-testers/Tester.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\PEA.dir\build.make CMakeFiles/PEA.dir/testers/Tester.cpp.obj
-.PHONY : testers/Tester.cpp.obj
+utils/FileRandomizer.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\PEA.dir\build.make CMakeFiles/PEA.dir/utils/FileRandomizer.cpp.obj
+.PHONY : utils/FileRandomizer.cpp.obj
 
-testers/Tester.i: testers/Tester.cpp.i
-.PHONY : testers/Tester.i
+utils/FileRandomizer.i: utils/FileRandomizer.cpp.i
+.PHONY : utils/FileRandomizer.i
 
 # target to preprocess a source file
-testers/Tester.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\PEA.dir\build.make CMakeFiles/PEA.dir/testers/Tester.cpp.i
-.PHONY : testers/Tester.cpp.i
+utils/FileRandomizer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\PEA.dir\build.make CMakeFiles/PEA.dir/utils/FileRandomizer.cpp.i
+.PHONY : utils/FileRandomizer.cpp.i
 
-testers/Tester.s: testers/Tester.cpp.s
-.PHONY : testers/Tester.s
+utils/FileRandomizer.s: utils/FileRandomizer.cpp.s
+.PHONY : utils/FileRandomizer.s
 
 # target to generate assembly for a file
-testers/Tester.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\PEA.dir\build.make CMakeFiles/PEA.dir/testers/Tester.cpp.s
-.PHONY : testers/Tester.cpp.s
+utils/FileRandomizer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\PEA.dir\build.make CMakeFiles/PEA.dir/utils/FileRandomizer.cpp.s
+.PHONY : utils/FileRandomizer.cpp.s
 
 utils/Timer.obj: utils/Timer.cpp.obj
 .PHONY : utils/Timer.obj
@@ -305,9 +281,6 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... PEA
-	@echo ... Menu.obj
-	@echo ... Menu.i
-	@echo ... Menu.s
 	@echo ... algorithm/BruteForce.obj
 	@echo ... algorithm/BruteForce.i
 	@echo ... algorithm/BruteForce.s
@@ -320,9 +293,9 @@ help:
 	@echo ... testers/AutomaticTester.obj
 	@echo ... testers/AutomaticTester.i
 	@echo ... testers/AutomaticTester.s
-	@echo ... testers/Tester.obj
-	@echo ... testers/Tester.i
-	@echo ... testers/Tester.s
+	@echo ... utils/FileRandomizer.obj
+	@echo ... utils/FileRandomizer.i
+	@echo ... utils/FileRandomizer.s
 	@echo ... utils/Timer.obj
 	@echo ... utils/Timer.i
 	@echo ... utils/Timer.s

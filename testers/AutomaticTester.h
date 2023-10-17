@@ -7,7 +7,8 @@
 
 
 class AutomaticTester {
-
+public:
+    void testBruteForce();
 };
 
 

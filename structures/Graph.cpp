@@ -4,7 +4,6 @@
 
 #include <vector>
 #include "Graph.h"
-#include "sstream"
 #include "fstream"
 #include "iostream"
 #include "iomanip"
@@ -32,27 +31,34 @@ Graph::~Graph() {
     }
 }
 
-void Graph::readGraphDirected(std::string s, int size) {
-    std::string name = R"(G:\PEA_PROJECT\input\)" + s;
+void Graph::readGraphDirected(std::string s) {
+    std::string name = R"(C:\Users\antek\Desktop\studia\5.sem\PEA_PROJECT\input\)" + s;
     std::ifstream file(name);
     if(file.is_open()) {
         std::string line;
         std::vector<int> lineData;
-        int i = 0;
-        /*
-         * becasue every file has 7 lines at the beginning which do not contain information about costs
-         */
-        for(int j = 0; j < 7; j++) {
-            std::getline(file, line);
-            std::cout << line << std::endl;
-        }
 
+        std::getline(file, line);
+//        std::stringstream val(line);
+
+//        if (edges != nullptr && vertices > 0) {
+//            for(int i = 0; i < vertices; i++) {
+//                delete[] edges[i];
+//                edges[i] = nullptr;
+//            }
+//            delete[] edges;
+//            edges = nullptr;
+//        }
+//        val >> vertices;
+//        edges = new int * [vertices];
+
+        int i = 0;
         while(std::getline(file, line)){
             std::stringstream lineStream(line);
             int value;
             while (lineStream >> value)
                 lineData.push_back(value);
-            if(lineData.size() == size){
+            if(lineData.size() == vertices){
                 std::copy(lineData.begin(), lineData.end(), edges[i]);
                 i++;
                 lineData.clear();

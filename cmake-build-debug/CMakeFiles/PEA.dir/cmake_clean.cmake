@@ -1,6 +1,4 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/PEA.dir/Menu.cpp.obj"
-  "CMakeFiles/PEA.dir/Menu.cpp.obj.d"
   "CMakeFiles/PEA.dir/algorithm/BruteForce.cpp.obj"
   "CMakeFiles/PEA.dir/algorithm/BruteForce.cpp.obj.d"
   "CMakeFiles/PEA.dir/main.cpp.obj"
@@ -9,8 +7,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/PEA.dir/structures/Graph.cpp.obj.d"
   "CMakeFiles/PEA.dir/testers/AutomaticTester.cpp.obj"
   "CMakeFiles/PEA.dir/testers/AutomaticTester.cpp.obj.d"
-  "CMakeFiles/PEA.dir/testers/Tester.cpp.obj"
-  "CMakeFiles/PEA.dir/testers/Tester.cpp.obj.d"
+  "CMakeFiles/PEA.dir/utils/FileRandomizer.cpp.obj"
+  "CMakeFiles/PEA.dir/utils/FileRandomizer.cpp.obj.d"
   "CMakeFiles/PEA.dir/utils/Timer.cpp.obj"
   "CMakeFiles/PEA.dir/utils/Timer.cpp.obj.d"
   "PEA.exe"
