@@ -24,7 +24,7 @@ void AutomaticTester::testBruteForce() {
         std::mt19937 gen(rd());
         std::uniform_int_distribution<> dist(0, j - 1);
         for (int i = 0; i < 100; i++) {
-            cout << "Test " << j - 2 << "." << i << " rozpoczety" << endl;
+            cout << "Test " << j - 2 << "." << i << " has been started" << endl;
             Graph graph(j);
             FileRandomizer::randomize(j);
             int start = dist(gen), min_cost;
@@ -36,11 +36,11 @@ void AutomaticTester::testBruteForce() {
             timer.stop();
 
             result += timer.micro();
-            cout << "Test " << j - 2 << "." << i << " wykonany" << endl;
+            cout << "Test " << j - 2 << "." << i << " has been completed" << endl;
             file << "rozmiar" << ";" << j << ";" << "koszt" << ";" << min_cost << ";" "czas wykonania" << ";" << timer.micro() << endl;
         }
 
-        file << "rozmiar" << ";" << j << ";" << "sredni czas wykonania" << ";" << result / 100 << endl;
+        file << "rozmiar" << ";" << j << ";" << "sredni czas wykonania" << ";" << result / 100 << endl << endl;
         result = 0;
     }
 }

@@ -155,4 +155,11 @@ CMakeFiles/PEA.dir/main.cpp.obj: \
  C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/stl_bvector.h \
  C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/vector.tcc \
  C:/Users/antek/Desktop/studia/5.sem/PEA_PROJECT/structures/Graph.h \
- C:\Users\antek\Desktop\studia\5.sem\PEA_PROJECT\testers/AutomaticTester.h
+ C:\Users\antek\Desktop\studia\5.sem\PEA_PROJECT\testers/AutomaticTester.h \
+ C:\Users\antek\Desktop\studia\5.sem\PEA_PROJECT\utils/FileRandomizer.h \
+ C:\Users\antek\Desktop\studia\5.sem\PEA_PROJECT\utils/Timer.h \
+ C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/chrono \
+ C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/ratio \
+ C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/limits \
+ C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/ctime \
+ C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/parse_numbers.h

@@ -31,7 +31,7 @@ Graph::~Graph() {
     }
 }
 
-void Graph::readGraphDirected(std::string s) {
+void Graph::readGraphDirected(std::string s) const {
     std::string name = R"(C:\Users\antek\Desktop\studia\5.sem\PEA_PROJECT\input\)" + s;
     std::ifstream file(name);
     if(file.is_open()) {
@@ -39,18 +39,6 @@ void Graph::readGraphDirected(std::string s) {
         std::vector<int> lineData;
 
         std::getline(file, line);
-//        std::stringstream val(line);
-
-//        if (edges != nullptr && vertices > 0) {
-//            for(int i = 0; i < vertices; i++) {
-//                delete[] edges[i];
-//                edges[i] = nullptr;
-//            }
-//            delete[] edges;
-//            edges = nullptr;
-//        }
-//        val >> vertices;
-//        edges = new int * [vertices];
 
         int i = 0;
         while(std::getline(file, line)){
@@ -72,21 +60,18 @@ void Graph::readGraphDirected(std::string s) {
 }
 
 void Graph::display() const{
-    // szerokość pola wyświetlania
+
     const int fieldWidth = 4;
     std::cout << "Graph as matrix" << std::endl;
 
-    // wyswietlanie naglowkow kolumn
     std::cout << std::setw(fieldWidth) << " " << " | ";
     for (int j = 0; j < vertices; j++) {
         std::cout << std::setw(fieldWidth) << j << " ";
     }
     std::cout << std::endl;
 
-    // wyswietlanie linii separatora
     std::cout << std::setfill('-') << std::setw(fieldWidth + 1) << "" << "+" << std::setw((fieldWidth + 1) * vertices) << "" << std::setfill(' ') << std::endl;
 
-    // wyswietlanie zawartosci tablicy
     for (int i = 0; i < vertices; i++) {
         std::cout << std::setw(fieldWidth) << i << " | ";
         for (int j = 0; j < vertices; j++) {

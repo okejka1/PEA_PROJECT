@@ -11,10 +11,13 @@
 class Graph {
 private:
 public:
-    int **edges; // krawędzie grafu
-    int vertices; // liczba wierzchołków
-    Graph(int v);
-    void readGraphDirected(std::string s);
+    /*
+     * two dimensional array to store adjacency matrix of graph
+     */
+    int **edges;
+    int vertices;
+    explicit Graph(int v);
+    void readGraphDirected(std::string s) const;
     void display() const;
 
     virtual ~Graph();
