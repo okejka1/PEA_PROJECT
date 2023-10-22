@@ -10,7 +10,7 @@
 
 void AutomaticTester::testBruteForce() {
 
-    std::ofstream file(R"(C:\Users\antek\Desktop\studia\5.sem\PEA_PROJECT\input\results.csv)");
+    std::ofstream file(R"(..\input\results.csv)");
     if(!file.is_open()){
         std::cout << "Couldn't open the file, ending test" << std::endl;
         return;
@@ -19,7 +19,7 @@ void AutomaticTester::testBruteForce() {
     long long result = 0;
     Timer timer;
 
-    for(int j = 3; j < 11; j++) {
+    for(int j = 3; j < 13; j++) {
         std::random_device rd;
         std::mt19937 gen(rd());
         std::uniform_int_distribution<> dist(0, j - 1);

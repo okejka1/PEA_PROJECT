@@ -31,14 +31,37 @@ Graph::~Graph() {
     }
 }
 
-void Graph::readGraphDirected(std::string s) const {
-    std::string name = R"(C:\Users\antek\Desktop\studia\5.sem\PEA_PROJECT\input\)" + s;
+
+void Graph::changeSize(int size) {
+    if(vertices > 0) {
+        for (int i = 0; i < vertices; i++) {
+            delete[] edges[i];
+            edges[i] = nullptr;
+        }
+        delete[] edges;
+        edges = nullptr;
+    }
+    vertices = size;
+    edges = new int * [vertices];
+    for(int i = 0; i < vertices; ++i) edges[i] = new int[vertices];
+
+    for(int i = 0; i < vertices; i++) {
+        for (int j = 0; j < vertices; j++) {
+            edges[i][j] = INT_MAX;
+        }
+    }
+}
+
+void Graph::readGraphDirected(const std::string& s){
+    std::string name = R"(..\input\)" + s;
     std::ifstream file(name);
     if(file.is_open()) {
         std::string line;
         std::vector<int> lineData;
 
         std::getline(file, line);
+        if(std::stoi(line) != vertices)
+            Graph::changeSize(std::stoi(line));
 
         int i = 0;
         while(std::getline(file, line)){
@@ -83,3 +106,4 @@ void Graph::display() const{
         std::cout << std::endl;
     }
 }
+

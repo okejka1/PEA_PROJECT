@@ -8,7 +8,7 @@
 #include "FileRandomizer.h"
 
 void FileRandomizer::randomize(int size) {
-    std::ofstream file(R"(C:\Users\antek\Desktop\studia\5.sem\PEA_PROJECT\input\random.atsp)");
+    std::ofstream file(R"(..\input\random.atsp)");
 
     if (!file.is_open()) {
         std::cout << "\nTHERE WAS A PROBLEM WITH OPENING FILE" << std::endl;
@@ -30,4 +30,6 @@ void FileRandomizer::randomize(int size) {
         }
         file << std::endl;
     }
+
+    file.close();
 }

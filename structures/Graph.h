@@ -17,7 +17,8 @@ public:
     int **edges;
     int vertices;
     explicit Graph(int v);
-    void readGraphDirected(std::string s) const;
+    void readGraphDirected(const std::string& s);
+    void changeSize(int size);
     void display() const;
 
     virtual ~Graph();

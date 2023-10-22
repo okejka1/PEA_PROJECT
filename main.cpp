@@ -17,7 +17,9 @@ int main() {
     }while(answer != 1 && answer != 2);
 
     if(answer == 1){
-        int size = 5, choice;
+        int size, choice;
+        cout << "Provide size: ";
+        cin >> size;
         Graph graph(size);
         FileRandomizer::randomize(size);
         graph.readGraphDirected("random.atsp");
@@ -37,6 +39,7 @@ int main() {
                     FileRandomizer::randomize(size);
                     graph.readGraphDirected("random.atsp");
                     waitForResponse();
+                    system("CLS");
                     break;
                 }
                 case 2: {
@@ -45,6 +48,7 @@ int main() {
                     cin >> name;
                     graph.readGraphDirected(name);
                     waitForResponse();
+                    system("CLS");
                     break;
                 }
                 case 3:{
@@ -64,10 +68,13 @@ int main() {
                     cout    << "Cost of shortest hamiltonian cycle = " << cost << endl
                             << "Algorithm completed in " << timer.mili() << " miliseconds and " << timer.micro() << " microseconds" << endl;
                     waitForResponse();
+                    system("CLS");
                     break;
                 }
                 case 4:
                     graph.display();
+                    waitForResponse();
+                    system("CLS");
                     break;
                 case 5:{
                     cout << "What do you want the size to be? " << endl;
@@ -76,9 +83,11 @@ int main() {
                         cout << "Size must be a number between 2 and 15!" << endl;
                         cin >> size;
                     }
+                    graph.changeSize(size);
                     FileRandomizer::randomize(size);
                     graph.readGraphDirected("random.atsp");
                     waitForResponse();
+                    system("CLS");
                     break;
                 }
                 default:
@@ -94,7 +103,7 @@ int main() {
 }
 
 void waitForResponse(){
-    std::cout << "\n\npress ENTER to continue..." << std::endl;
+    std::cout << std::endl << std::endl << "press ENTER to continue..." << std::endl;
     std::cin.ignore(10000, '\n');
     getchar();
 }
