@@ -38,8 +38,6 @@ int main() {
                 case 1:{
                     FileRandomizer::randomize(size);
                     graph.readGraphDirected("random.atsp");
-                    waitForResponse();
-                    system("CLS");
                     break;
                 }
                 case 2: {
@@ -47,8 +45,7 @@ int main() {
                     cout << "Provide file name with extension: ";
                     cin >> name;
                     graph.readGraphDirected(name);
-                    waitForResponse();
-                    system("CLS");
+
                     break;
                 }
                 case 3:{
@@ -67,14 +64,11 @@ int main() {
                     solver.print();
                     cout    << "Cost of shortest hamiltonian cycle = " << cost << endl
                             << "Algorithm completed in " << timer.mili() << " miliseconds and " << timer.micro() << " microseconds" << endl;
-                    waitForResponse();
-                    system("CLS");
+
                     break;
                 }
                 case 4:
                     graph.display();
-                    waitForResponse();
-                    system("CLS");
                     break;
                 case 5:{
                     cout << "What do you want the size to be? " << endl;
@@ -86,8 +80,6 @@ int main() {
                     graph.changeSize(size);
                     FileRandomizer::randomize(size);
                     graph.readGraphDirected("random.atsp");
-                    waitForResponse();
-                    system("CLS");
                     break;
                 }
                 default:
@@ -102,8 +94,8 @@ int main() {
     return 0;
 }
 
-void waitForResponse(){
-    std::cout << std::endl << std::endl << "press ENTER to continue..." << std::endl;
-    std::cin.ignore(10000, '\n');
-    getchar();
-}
+//void waitForResponse(){
+//    std::cout << std::endl << std::endl << "press ENTER to continue..." << std::endl;
+//    std::cin.ignore(10000, '\n');
+//    getchar();
+//}

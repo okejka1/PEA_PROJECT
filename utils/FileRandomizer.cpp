@@ -24,7 +24,7 @@ void FileRandomizer::randomize(int size) {
     for(int i = 0; i < size; i++) {
         for(int j = 0; j < size; j++){
             if(i == j)
-                file << "  " << 0;
+                file << "  " << -1;
             else
                 file << "  " << weightDist(gen);
         }
