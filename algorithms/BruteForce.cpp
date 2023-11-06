@@ -28,7 +28,7 @@ int BruteForce::ATSPBruteForce(Graph &graph, int start) {
     currentPath.push_back(start);
 
     /*
-     * start the algorithm
+     * start the algorithms
      */
     bruteForce(graph, start, 1, start);
 

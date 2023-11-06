@@ -56,10 +56,10 @@ RM = "C:\Program Files\JetBrains\CLion 2022.3.2\bin\cmake\win\x64\bin\cmake.exe"
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\mhajd\CLionProjects\PEA_PROJECT
+CMAKE_SOURCE_DIR = C:\Users\User\CLionProjects\PEA_PROJECT
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\mhajd\CLionProjects\PEA_PROJECT\cmake-build-debug
+CMAKE_BINARY_DIR = C:\Users\User\CLionProjects\PEA_PROJECT\cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -86,9 +86,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\mhajd\CLionProjects\PEA_PROJECT\cmake-build-debug\CMakeFiles C:\Users\mhajd\CLionProjects\PEA_PROJECT\cmake-build-debug\\CMakeFiles\progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\User\CLionProjects\PEA_PROJECT\cmake-build-debug\CMakeFiles C:\Users\User\CLionProjects\PEA_PROJECT\cmake-build-debug\\CMakeFiles\progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\mhajd\CLionProjects\PEA_PROJECT\cmake-build-debug\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\User\CLionProjects\PEA_PROJECT\cmake-build-debug\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -128,29 +128,53 @@ PEA/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\PEA.dir\build.make CMakeFiles/PEA.dir/build
 .PHONY : PEA/fast
 
-algorithm/BruteForce.obj: algorithm/BruteForce.cpp.obj
-.PHONY : algorithm/BruteForce.obj
+algorithms/BB.obj: algorithms/BB.cpp.obj
+.PHONY : algorithms/BB.obj
 
 # target to build an object file
-algorithm/BruteForce.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\PEA.dir\build.make CMakeFiles/PEA.dir/algorithm/BruteForce.cpp.obj
-.PHONY : algorithm/BruteForce.cpp.obj
+algorithms/BB.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\PEA.dir\build.make CMakeFiles/PEA.dir/algorithms/BB.cpp.obj
+.PHONY : algorithms/BB.cpp.obj
 
-algorithm/BruteForce.i: algorithm/BruteForce.cpp.i
-.PHONY : algorithm/BruteForce.i
+algorithms/BB.i: algorithms/BB.cpp.i
+.PHONY : algorithms/BB.i
 
 # target to preprocess a source file
-algorithm/BruteForce.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\PEA.dir\build.make CMakeFiles/PEA.dir/algorithm/BruteForce.cpp.i
-.PHONY : algorithm/BruteForce.cpp.i
+algorithms/BB.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\PEA.dir\build.make CMakeFiles/PEA.dir/algorithms/BB.cpp.i
+.PHONY : algorithms/BB.cpp.i
 
-algorithm/BruteForce.s: algorithm/BruteForce.cpp.s
-.PHONY : algorithm/BruteForce.s
+algorithms/BB.s: algorithms/BB.cpp.s
+.PHONY : algorithms/BB.s
 
 # target to generate assembly for a file
-algorithm/BruteForce.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\PEA.dir\build.make CMakeFiles/PEA.dir/algorithm/BruteForce.cpp.s
-.PHONY : algorithm/BruteForce.cpp.s
+algorithms/BB.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\PEA.dir\build.make CMakeFiles/PEA.dir/algorithms/BB.cpp.s
+.PHONY : algorithms/BB.cpp.s
+
+algorithms/BruteForce.obj: algorithms/BruteForce.cpp.obj
+.PHONY : algorithms/BruteForce.obj
+
+# target to build an object file
+algorithms/BruteForce.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\PEA.dir\build.make CMakeFiles/PEA.dir/algorithms/BruteForce.cpp.obj
+.PHONY : algorithms/BruteForce.cpp.obj
+
+algorithms/BruteForce.i: algorithms/BruteForce.cpp.i
+.PHONY : algorithms/BruteForce.i
+
+# target to preprocess a source file
+algorithms/BruteForce.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\PEA.dir\build.make CMakeFiles/PEA.dir/algorithms/BruteForce.cpp.i
+.PHONY : algorithms/BruteForce.cpp.i
+
+algorithms/BruteForce.s: algorithms/BruteForce.cpp.s
+.PHONY : algorithms/BruteForce.s
+
+# target to generate assembly for a file
+algorithms/BruteForce.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\PEA.dir\build.make CMakeFiles/PEA.dir/algorithms/BruteForce.cpp.s
+.PHONY : algorithms/BruteForce.cpp.s
 
 main.obj: main.cpp.obj
 .PHONY : main.obj
@@ -281,9 +305,12 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... PEA
-	@echo ... algorithm/BruteForce.obj
-	@echo ... algorithm/BruteForce.i
-	@echo ... algorithm/BruteForce.s
+	@echo ... algorithms/BB.obj
+	@echo ... algorithms/BB.i
+	@echo ... algorithms/BB.s
+	@echo ... algorithms/BruteForce.obj
+	@echo ... algorithms/BruteForce.i
+	@echo ... algorithms/BruteForce.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

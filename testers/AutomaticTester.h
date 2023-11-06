@@ -9,6 +9,7 @@
 class AutomaticTester {
 public:
     static void testBruteForce();
+    static void testBB();
 };
 
 

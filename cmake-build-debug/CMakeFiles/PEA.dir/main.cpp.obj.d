@@ -1,5 +1,5 @@
 CMakeFiles/PEA.dir/main.cpp.obj: \
- C:\Users\mhajd\CLionProjects\PEA_PROJECT\main.cpp \
+ C:\Users\User\CLionProjects\PEA_PROJECT\main.cpp \
  C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/iostream \
  C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32/bits/c++config.h \
  C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32/bits/os_defines.h \
@@ -147,17 +147,17 @@ CMakeFiles/PEA.dir/main.cpp.obj: \
  C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/ostream.tcc \
  C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/istream \
  C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/istream.tcc \
- C:\Users\mhajd\CLionProjects\PEA_PROJECT\structures/Graph.h \
- C:\Users\mhajd\CLionProjects\PEA_PROJECT\algorithm/BruteForce.h \
+ C:\Users\User\CLionProjects\PEA_PROJECT\structures/Graph.h \
+ C:\Users\User\CLionProjects\PEA_PROJECT\algorithms/BruteForce.h \
  C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/vector \
  C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/stl_uninitialized.h \
  C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/stl_vector.h \
  C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/stl_bvector.h \
  C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/vector.tcc \
- C:/Users/mhajd/CLionProjects/PEA_PROJECT/structures/Graph.h \
- C:\Users\mhajd\CLionProjects\PEA_PROJECT\testers/AutomaticTester.h \
- C:\Users\mhajd\CLionProjects\PEA_PROJECT\utils/FileRandomizer.h \
- C:\Users\mhajd\CLionProjects\PEA_PROJECT\utils/Timer.h \
+ C:/Users/User/CLionProjects/PEA_PROJECT/structures/Graph.h \
+ C:\Users\User\CLionProjects\PEA_PROJECT\testers/AutomaticTester.h \
+ C:\Users\User\CLionProjects\PEA_PROJECT\utils/FileRandomizer.h \
+ C:\Users\User\CLionProjects\PEA_PROJECT\utils/Timer.h \
  C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/chrono \
  C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/ratio \
  C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/limits \

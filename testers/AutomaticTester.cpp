@@ -6,11 +6,11 @@
 #include "../utils/Timer.h"
 #include "../utils/FileRandomizer.h"
 #include "../structures/Graph.h"
-#include "../algorithm/BruteForce.h"
+#include "../algorithms/BruteForce.h"
 
 void AutomaticTester::testBruteForce() {
 
-    std::ofstream file(R"(..\input\results.csv)");
+    std::ofstream file(R"(..\output\results.csv)");
     if(!file.is_open()){
         std::cout << "Couldn't open the file, ending test" << std::endl;
         return;
@@ -43,4 +43,8 @@ void AutomaticTester::testBruteForce() {
         file << "rozmiar" << ";" << j << ";" << "sredni czas wykonania" << ";" << result / 100 << endl << endl;
         result = 0;
     }
+}
+
+void AutomaticTester::testBB() {
+
 }

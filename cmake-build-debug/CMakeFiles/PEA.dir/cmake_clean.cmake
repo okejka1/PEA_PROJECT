@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/PEA.dir/algorithm/BruteForce.cpp.obj"
-  "CMakeFiles/PEA.dir/algorithm/BruteForce.cpp.obj.d"
+  "CMakeFiles/PEA.dir/algorithms/BB.cpp.obj"
+  "CMakeFiles/PEA.dir/algorithms/BB.cpp.obj.d"
+  "CMakeFiles/PEA.dir/algorithms/BruteForce.cpp.obj"
+  "CMakeFiles/PEA.dir/algorithms/BruteForce.cpp.obj.d"
   "CMakeFiles/PEA.dir/main.cpp.obj"
   "CMakeFiles/PEA.dir/main.cpp.obj.d"
   "CMakeFiles/PEA.dir/structures/Graph.cpp.obj"

@@ -1,109 +1,106 @@
 #include <iostream>
 #include "structures/Graph.h"
-#include "algorithm/BruteForce.h"
+#include "algorithms/BruteForce.h"
 #include "testers/AutomaticTester.h"
 #include "utils/FileRandomizer.h"
 #include "utils/Timer.h"
+#include <string>
 
-using namespace std;
 
-void waitForResponse();
+//void waitForResponse() {
+//    std::cout << std::endl << std::endl << "press ENTER to continue..." << std::endl;
+//    std::cin.ignore(10000, '\n');
+//    getchar();
+//}
+
+
+void menu() {
+    int option = -1;
+    std::string fileName;
+    Graph graph(1);
+    std::cout << "\nAlgorithms and computational complexity\n";
+    do {
+        std::cout << endl;
+        std::cout << "1. Load graph from file\n";
+        std::cout << "2. Generate random graph\n";
+        std::cout << "3. Show graph (adjacency matrix)\n";
+        std::cout << "4. Test brute force\n";
+        std::cout << "5. Test B&B\n";
+        std::cout << "6. Time measurements for BF approach\n";
+        std::cout << "7. Time measurements for B&B approach\n";
+        std::cout << "8. Exit\n";
+        std::cout << "Choose an option:";
+
+        std::cin >> option;
+        switch (option) {
+            case 1:
+                std::cout << "Provide filename:";
+                std::cin >> fileName;
+                graph.readGraphDirected(fileName);
+//                waitForResponse();
+//                system("CLS");
+                break;
+            case 2: {
+                int size = 0;
+                std::cout << "Provide size:";
+                std::cin >> size;
+                fileName = "random.atsp";
+                FileRandomizer::randomize(size);
+                graph.readGraphDirected(fileName);
+//                waitForResponse();
+//                system("CLS");
+                break;
+            }
+            case 3:
+                graph.display();
+//                waitForResponse();
+//                system("CLS");
+                break;
+            case 4: {
+                Timer timer;
+                int cost;
+                int start;
+                BruteForce solver(graph);
+                std::cout << "Provide the starting vertex:";
+                std::cin >> start;
+                if (start < 0 || start >= graph.vertices) {
+                    start = 0;
+                    std::cout << "invalid starting vertex, starting vertex set to 0" << endl;
+                }
+                timer.start();
+                cost = solver.ATSPBruteForce(graph, start);
+                timer.stop();
+                solver.print();
+                std::cout << "Cost of shortest hamiltonian cycle = " << cost << endl
+                          << "Algorithm completed in " << timer.mili() << " miliseconds and " << timer.micro()
+                          << " microseconds" << endl;
+//                waitForResponse();
+//                system("CLS");
+                break;
+            }
+            case 5:
+                //
+                break;
+            case 6:
+                AutomaticTester::testBruteForce();
+                break;
+            case 7:
+                AutomaticTester::testBB();
+                break;
+            case 8:
+                break;
+            default:
+                std::cout << "Invalid input,try again\n";
+        }
+    } while (option != 8);
+}
+
+
 
 int main() {
-    int answer;
-    do {
-        cout << "What do you want to do?" << endl << "1. Manual test" << endl << "2. Automatic test" << endl;
-        cin >> answer;
-    }while(answer != 1 && answer != 2);
+   menu();
 
-    if(answer == 1){
-        int size, choice;
-        cout << "Provide size: ";
-        cin >> size;
-        Graph graph(size);
-        FileRandomizer::randomize(size);
-        graph.readGraphDirected("random.atsp");
-        do {
-
-            Timer timer;
-
-            cout    << "1. Generate random graph"   << endl
-                    << "2. Load graph from file"    << endl
-                    << "3. Test brute force"        << endl
-                    << "4. Show graph"              << endl
-                    << "5. Change size"             << endl
-                    << "6. Exit program"            << endl;
-            cin >> choice;
-            switch(choice){
-                case 1:{
-                    FileRandomizer::randomize(size);
-                    graph.readGraphDirected("random.atsp");
-                    waitForResponse();
-                    system("CLS");
-                    break;
-                }
-                case 2: {
-                    string name;
-                    cout << "Provide file name with extension: ";
-                    cin >> name;
-                    graph.readGraphDirected(name);
-                    waitForResponse();
-                    system("CLS");
-                    break;
-                }
-                case 3:{
-                    BruteForce solver(graph);
-                    int cost, start;
-                    cout << "Provide the starting vertex: ";
-                    cin >> start;
-                    if(start < 0 || start >= size){
-                        start = 0;
-                        cout << "invalid starting vertex, starting vertex set to 0" << endl;
-                    }
-
-                    timer.start();
-                    cost = solver.ATSPBruteForce(graph, start);
-                    timer.stop();
-                    solver.print();
-                    cout    << "Cost of shortest hamiltonian cycle = " << cost << endl
-                            << "Algorithm completed in " << timer.mili() << " miliseconds and " << timer.micro() << " microseconds" << endl;
-                    waitForResponse();
-                    system("CLS");
-                    break;
-                }
-                case 4:
-                    graph.display();
-                    waitForResponse();
-                    system("CLS");
-                    break;
-                case 5:{
-                    cout << "What do you want the size to be? " << endl;
-                    cin >> size;
-                    while(size < 2 || size > 15){
-                        cout << "Size must be a number between 2 and 15!" << endl;
-                        cin >> size;
-                    }
-                    graph.changeSize(size);
-                    FileRandomizer::randomize(size);
-                    graph.readGraphDirected("random.atsp");
-                    waitForResponse();
-                    system("CLS");
-                    break;
-                }
-                default:
-                    break;
-            }
-        }while(choice != 6);
-    }
-
-    else
-        AutomaticTester::testBruteForce();
 
     return 0;
 }
 
-void waitForResponse(){
-    std::cout << std::endl << std::endl << "press ENTER to continue..." << std::endl;
-    std::cin.ignore(10000, '\n');
-    getchar();
-}
