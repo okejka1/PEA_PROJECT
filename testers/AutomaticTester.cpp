@@ -8,11 +8,12 @@
 #include "../structures/Graph.h"
 #include "../algorithms/BruteForce.h"
 #include "../algorithms/DP.h"
+#include "../algorithms/BB.h"
 
 void AutomaticTester::testBruteForce() {
 
     std::ofstream file(R"(..\output\results.csv)");
-    if(!file.is_open()){
+    if (!file.is_open()) {
         std::cout << "Couldn't open the file, ending test" << std::endl;
         return;
     }
@@ -20,7 +21,7 @@ void AutomaticTester::testBruteForce() {
     long long result = 0;
     Timer timer;
 
-    for(int j = 3; j < 13; j++) {
+    for (int j = 3; j < 13; j++) {
         std::random_device rd;
         std::mt19937 gen(rd());
         std::uniform_int_distribution<> dist(0, j - 1);
@@ -38,7 +39,8 @@ void AutomaticTester::testBruteForce() {
 
             result += timer.micro();
             cout << "Test " << j - 2 << "." << i << " has been completed" << endl;
-            file << "rozmiar" << ";" << j << ";" << "koszt" << ";" << minCost << ";" "czas wykonania" << ";" << timer.micro() << endl;
+            file << "rozmiar" << ";" << j << ";" << "koszt" << ";" << minCost << ";" "czas wykonania" << ";"
+                 << timer.micro() << endl;
         }
 
         file << "rozmiar" << ";" << j << ";" << "sredni czas wykonania" << ";" << result / 100 << endl << endl;
@@ -49,14 +51,14 @@ void AutomaticTester::testBruteForce() {
 void AutomaticTester::testDynamicProgramming() {
 
     std::ofstream file(R"(..\output\results.csv)");
-    if(!file.is_open()){
+    if (!file.is_open()) {
         std::cout << "Couldn't open the file, ending test" << std::endl;
         return;
     }
 
     long long result = 0;
     Timer timer;
-    for(int j = 3; j < 20; j++) {
+    for (int j = 3; j < 17; j++) {
         std::random_device rd;
         std::mt19937 gen(rd());
         std::uniform_int_distribution<> dist(0, j - 1);
@@ -74,7 +76,8 @@ void AutomaticTester::testDynamicProgramming() {
 
             result += timer.micro();
             cout << "Test " << j - 2 << "." << i << " has been completed" << endl;
-            file << "rozmiar" << ";" << j << ";" << "koszt" << ";" << minCost << ";" "czas wykonania" << ";" << timer.micro() << endl;
+            file << "rozmiar" << ";" << j << ";" << "koszt" << ";" << minCost << ";" "czas wykonania" << ";"
+                 << timer.micro() << endl;
         }
 
         file << "rozmiar" << ";" << j << ";" << "sredni czas wykonania" << ";" << result / 100 << endl << endl;
@@ -85,6 +88,40 @@ void AutomaticTester::testDynamicProgramming() {
 }
 
 void AutomaticTester::testBranchAndBound() {
+    std::ofstream file(R"(..\output\results.csv)");
+    if (!file.is_open()) {
+        std::cout << "Couldn't open the file, ending test" << std::endl;
+        return;
+    }
+
+    long long result = 0;
+    Timer timer;
+    for (int j = 3; j < 17; j++) {
+        std::random_device rd;
+        std::mt19937 gen(rd());
+        std::uniform_int_distribution<> dist(0, j - 1);
+        for (int i = 0; i < 100; i++) {
+            cout << "Test " << j - 2 << "." << i << " has been started" << endl;
+            Graph graph(j);
+            FileRandomizer::randomize(j);
+            int start = dist(gen), minCost;
+            graph.readGraphDirected("random.atsp");
+            BB solver(graph);
+            timer.start();
+            minCost = solver.BBSolver(graph, start);
+            timer.stop();
+
+
+            result += timer.micro();
+            cout << "Test " << j - 2 << "." << i << " has been completed" << endl;
+            file << "rozmiar" << ";" << j << ";" << "koszt" << ";" << minCost << ";" "czas wykonania" << ";"
+                 << timer.micro() << endl;
+        }
+
+        file << "rozmiar" << ";" << j << ";" << "sredni czas wykonania" << ";" << result / 100 << endl << endl;
+        result = 0;
+    }
+
 
 }
 

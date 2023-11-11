@@ -1,5 +1,3 @@
-
-
 #include <vector>
 #include <iostream>
 #include "DP.h"
@@ -13,9 +11,6 @@ DP::DP() {
 DP::~DP() {
 
 }
-
-
-
 
 
 int DP::DPSolver(Graph &graph) {
@@ -75,7 +70,7 @@ void DP::backtrack(std::vector<std::vector<int>> &parent, int start) {
 }
 
 void DP::print() {
-    for(auto city : shortestPath) {
+    for (auto city: shortestPath) {
         std::cout << city << " ";
     }
 

@@ -5,7 +5,9 @@
 #include "utils/FileRandomizer.h"
 #include "utils/Timer.h"
 #include "algorithms/DP.h"
+#include "algorithms/BB.h"
 #include <string>
+
 
 
 //void waitForResponse() {
@@ -40,8 +42,6 @@ void menu() {
                 std::cout << "Provide filename:";
                 std::cin >> fileName;
                 graph.readGraphDirected(fileName);
-//                waitForResponse();
-//                system("CLS");
                 break;
             case 2: {
                 int size = 0;
@@ -50,14 +50,10 @@ void menu() {
                 fileName = "random.atsp";
                 FileRandomizer::randomize(size);
                 graph.readGraphDirected(fileName);
-//                waitForResponse();
-//                system("CLS");
                 break;
             }
             case 3:
                 graph.display();
-//                waitForResponse();
-//                system("CLS");
                 break;
             case 4: {
                 Timer timer;
@@ -77,8 +73,6 @@ void menu() {
                 std::cout << "Cost of shortest hamiltonian cycle = " << cost << endl
                           << "Algorithm completed in " << timer.mili() << " miliseconds and " << timer.micro()
                           << " microseconds" << endl;
-//                waitForResponse();
-//                system("CLS");
                 break;
             }
             case 5: {
@@ -94,9 +88,26 @@ void menu() {
                           << " microseconds" << endl;
                 break;
             }
-            case 6:
-
+            case 6: {
+                Timer timer;
+                int cost = 0;
+                int start;
+                std::cout << "Provide the starting vertex:";
+                std::cin >> start;
+                if (start < 0 || start >= graph.vertices) {
+                    start = 0;
+                    std::cout << "invalid starting vertex, starting vertex set to 0" << endl;
+                }
+                BB solver(graph);
+                timer.start();
+                cost = solver.BBSolver(graph, start);
+                timer.stop();
+                solver.print();
+                std::cout << "Cost of shortest hamiltonian cycle = " << cost << endl
+                          << "Algorithm completed in " << timer.mili() << " miliseconds and " << timer.micro()
+                          << " microseconds" << endl;
                 break;
+            }
             case 7:
                 AutomaticTester::testBruteForce();
                 break;
@@ -104,6 +115,7 @@ void menu() {
                 AutomaticTester::testDynamicProgramming();
                 break;
             case 9:
+                AutomaticTester::testBranchAndBound();
                 break;
             case 10:
                 break;
@@ -114,9 +126,8 @@ void menu() {
 }
 
 
-
 int main() {
-   menu();
+    menu();
 
 
     return 0;

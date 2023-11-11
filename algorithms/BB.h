@@ -13,26 +13,27 @@ private:
     int globalCost;
     int currentCost;
     int numOfCities;
-    bool* visited;
-    int pathLength;
+    std::vector<bool> visited;
     std::vector<int> currentPath;
     std::vector<int> bestPath;
-    int *cheapestExit;
+    std::vector<int> cheapestExit;
 
     void findCheapest(Graph &graph);
+
     int lowerBound(int vertex);
 
-    void DFSApproach(int node, Graph &graph);
+    void DFSApproach(Graph &graph, int currentNode, int pathLength, int startingNode);
 
 
 public:
     explicit BB(Graph &graph);
+
     ~BB();
 
     void print();
 
+    int BBSolver(Graph &graph, int start);
 
-    int BBSolver(Graph &graph, int node);
 };
 
 
