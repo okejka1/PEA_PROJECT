@@ -1,6 +1,6 @@
 CMakeFiles/PEA.dir/utils/Timer.cpp.obj: \
- C:\Users\User\CLionProjects\PEA_PROJECT\utils\Timer.cpp \
- C:\Users\User\CLionProjects\PEA_PROJECT\utils\Timer.h \
+ C:\Users\mhajd\CLionProjects\PEA_PROJECT\utils\Timer.cpp \
+ C:\Users\mhajd\CLionProjects\PEA_PROJECT\utils\Timer.h \
  C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/chrono \
  C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/ratio \
  C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/type_traits \

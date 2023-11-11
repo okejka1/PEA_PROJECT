@@ -4,6 +4,7 @@
 #include "testers/AutomaticTester.h"
 #include "utils/FileRandomizer.h"
 #include "utils/Timer.h"
+#include "algorithms/DP.h"
 #include <string>
 
 
@@ -25,10 +26,12 @@ void menu() {
         std::cout << "2. Generate random graph\n";
         std::cout << "3. Show graph (adjacency matrix)\n";
         std::cout << "4. Test brute force\n";
-        std::cout << "5. Test B&B\n";
-        std::cout << "6. Time measurements for BF approach\n";
-        std::cout << "7. Time measurements for B&B approach\n";
-        std::cout << "8. Exit\n";
+        std::cout << "5. Test DP\n";
+        std::cout << "6. Test B&B\n";
+        std::cout << "7. Time measurements for BF approach\n";
+        std::cout << "8. Time measurements for DP approach\n";
+        std::cout << "9. Time measurements for B&B approach\n";
+        std::cout << "10. Exit\n";
         std::cout << "Choose an option:";
 
         std::cin >> option;
@@ -78,21 +81,36 @@ void menu() {
 //                system("CLS");
                 break;
             }
-            case 5:
-                //
+            case 5: {
+                Timer timer;
+                int cost = 0;
+                DP solver;
+                timer.start();
+                cost = solver.ATSPdp(graph);
+                timer.stop();
+                solver.display();
+                std::cout << "Cost of shortest hamiltonian cycle = " << cost << endl
+                          << "Algorithm completed in " << timer.mili() << " miliseconds and " << timer.micro()
+                          << " microseconds" << endl;
                 break;
+            }
             case 6:
-                AutomaticTester::testBruteForce();
+
                 break;
             case 7:
-                AutomaticTester::testBB();
+                AutomaticTester::testBruteForce();
                 break;
             case 8:
+                AutomaticTester::testDynamicProgramming();
                 break;
+            case 9:
+                break;
+            case 10:
+                break
             default:
                 std::cout << "Invalid input,try again\n";
         }
-    } while (option != 8);
+    } while (option != 10);
 }
 
 

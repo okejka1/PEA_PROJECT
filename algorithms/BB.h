@@ -1,21 +1,12 @@
-//
-// Created by User on 06.11.2023.
-//
+#include <iostream>
+#include <vector>
+
 
 #ifndef PEA_BB_H
 #define PEA_BB_H
 
 
 class BB {
-private:
-
-    struct Node {
-        int lowerBound;
-
-    };
-
-public:
-
 
 };
 

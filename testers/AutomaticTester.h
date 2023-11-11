@@ -9,7 +9,8 @@
 class AutomaticTester {
 public:
     static void testBruteForce();
-    static void testBB();
+    static void testDynamicProgramming();
+    static void testBranchAndBound();
 };
 
 

@@ -56,10 +56,10 @@ RM = "C:\Program Files\JetBrains\CLion 2022.3.2\bin\cmake\win\x64\bin\cmake.exe"
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\User\CLionProjects\PEA_PROJECT
+CMAKE_SOURCE_DIR = C:\Users\mhajd\CLionProjects\PEA_PROJECT
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\User\CLionProjects\PEA_PROJECT\cmake-build-debug
+CMAKE_BINARY_DIR = C:\Users\mhajd\CLionProjects\PEA_PROJECT\cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -86,9 +86,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\User\CLionProjects\PEA_PROJECT\cmake-build-debug\CMakeFiles C:\Users\User\CLionProjects\PEA_PROJECT\cmake-build-debug\\CMakeFiles\progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\mhajd\CLionProjects\PEA_PROJECT\cmake-build-debug\CMakeFiles C:\Users\mhajd\CLionProjects\PEA_PROJECT\cmake-build-debug\\CMakeFiles\progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\User\CLionProjects\PEA_PROJECT\cmake-build-debug\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\mhajd\CLionProjects\PEA_PROJECT\cmake-build-debug\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -175,6 +175,30 @@ algorithms/BruteForce.s: algorithms/BruteForce.cpp.s
 algorithms/BruteForce.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\PEA.dir\build.make CMakeFiles/PEA.dir/algorithms/BruteForce.cpp.s
 .PHONY : algorithms/BruteForce.cpp.s
+
+algorithms/DP.obj: algorithms/DP.cpp.obj
+.PHONY : algorithms/DP.obj
+
+# target to build an object file
+algorithms/DP.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\PEA.dir\build.make CMakeFiles/PEA.dir/algorithms/DP.cpp.obj
+.PHONY : algorithms/DP.cpp.obj
+
+algorithms/DP.i: algorithms/DP.cpp.i
+.PHONY : algorithms/DP.i
+
+# target to preprocess a source file
+algorithms/DP.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\PEA.dir\build.make CMakeFiles/PEA.dir/algorithms/DP.cpp.i
+.PHONY : algorithms/DP.cpp.i
+
+algorithms/DP.s: algorithms/DP.cpp.s
+.PHONY : algorithms/DP.s
+
+# target to generate assembly for a file
+algorithms/DP.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\PEA.dir\build.make CMakeFiles/PEA.dir/algorithms/DP.cpp.s
+.PHONY : algorithms/DP.cpp.s
 
 main.obj: main.cpp.obj
 .PHONY : main.obj
@@ -311,6 +335,9 @@ help:
 	@echo ... algorithms/BruteForce.obj
 	@echo ... algorithms/BruteForce.i
 	@echo ... algorithms/BruteForce.s
+	@echo ... algorithms/DP.obj
+	@echo ... algorithms/DP.i
+	@echo ... algorithms/DP.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
