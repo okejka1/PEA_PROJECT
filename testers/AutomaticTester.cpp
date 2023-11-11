@@ -68,7 +68,7 @@ void AutomaticTester::testDynamicProgramming() {
             graph.readGraphDirected("random.atsp");
             DP solver;
             timer.start();
-            minCost = solver.ATSPdp(graph);
+            minCost = solver.DPSolver(graph);
             timer.stop();
 
 

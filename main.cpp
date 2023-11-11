@@ -86,9 +86,9 @@ void menu() {
                 int cost = 0;
                 DP solver;
                 timer.start();
-                cost = solver.ATSPdp(graph);
+                cost = solver.DPSolver(graph);
                 timer.stop();
-                solver.display();
+                solver.print();
                 std::cout << "Cost of shortest hamiltonian cycle = " << cost << endl
                           << "Algorithm completed in " << timer.mili() << " miliseconds and " << timer.micro()
                           << " microseconds" << endl;
@@ -106,7 +106,7 @@ void menu() {
             case 9:
                 break;
             case 10:
-                break
+                break;
             default:
                 std::cout << "Invalid input,try again\n";
         }

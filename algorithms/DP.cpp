@@ -18,7 +18,7 @@ DP::~DP() {
 
 
 
-int DP::ATSPdp(Graph &graph) {
+int DP::DPSolver(Graph &graph) {
     int fullVisit = (1 << graph.vertices) - 1;
     int minCost = INT_MAX;
     int minCostPos = INT_MAX;
@@ -74,7 +74,7 @@ void DP::backtrack(std::vector<std::vector<int>> &parent, int start) {
         shortestPath.emplace_back(start);
 }
 
-void DP::display() {
+void DP::print() {
     for(auto city : shortestPath) {
         std::cout << city << " ";
     }

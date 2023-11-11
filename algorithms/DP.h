@@ -18,9 +18,9 @@ public:
     DP();
     ~DP();
 
-    int ATSPdp(Graph &graph);
+    int DPSolver(Graph &graph);
 
-    void display();
+    void print();
 
 };
 
