@@ -58,7 +58,7 @@ void AutomaticTester::testDynamicProgramming() {
 
     long long result = 0;
     Timer timer;
-    for (int j = 3; j < 17; j++) {
+    for (int j = 3; j < 23; j++) {
         std::random_device rd;
         std::mt19937 gen(rd());
         std::uniform_int_distribution<> dist(0, j - 1);
@@ -96,7 +96,7 @@ void AutomaticTester::testBranchAndBound() {
 
     long long result = 0;
     Timer timer;
-    for (int j = 3; j < 17; j++) {
+    for (int j = 3; j < 23; j++) {
         std::random_device rd;
         std::mt19937 gen(rd());
         std::uniform_int_distribution<> dist(0, j - 1);

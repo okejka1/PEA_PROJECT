@@ -30,10 +30,11 @@ void menu() {
         std::cout << "4. Test brute force\n";
         std::cout << "5. Test DP\n";
         std::cout << "6. Test B&B\n";
-        std::cout << "7. Time measurements for BF approach\n";
-        std::cout << "8. Time measurements for DP approach\n";
-        std::cout << "9. Time measurements for B&B approach\n";
-        std::cout << "10. Exit\n";
+        std::cout << "7. Test tabu search\n";
+        std::cout << "8. Time measurements for BF approach\n";
+        std::cout << "9. Time measurements for DP approach\n";
+        std::cout << "10. Time measurements for B&B approach\n";
+        std::cout << "11. Exit\n";
         std::cout << "Choose an option:";
 
         std::cin >> option;
@@ -109,22 +110,23 @@ void menu() {
                 break;
             }
             case 7:
-                AutomaticTester::testBruteForce();
                 break;
             case 8:
-                AutomaticTester::testDynamicProgramming();
+                AutomaticTester::testBruteForce();
                 break;
             case 9:
-                AutomaticTester::testBranchAndBound();
+                AutomaticTester::testDynamicProgramming();
                 break;
             case 10:
+                AutomaticTester::testBranchAndBound();
+                break;
+            case 11:
                 break;
             default:
                 std::cout << "Invalid input,try again\n";
         }
-    } while (option != 10);
-}
-
+    } while (option != 11);
+};
 
 int main() {
     menu();

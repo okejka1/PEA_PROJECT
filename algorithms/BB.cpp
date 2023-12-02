@@ -73,13 +73,10 @@ void BB::DFSApproach(Graph &graph, int currentNode, int pathLength, int starting
         for (int city = 0; city < numOfCities; city++) {
             if (currentCost + graph.edges[currentNode][city] + lowerBound(city) >= globalCost || visited[city])
                 continue;
-
             currentCost += graph.edges[currentNode][city];
             currentPath.push_back(city);  // Add the current city to the path
             DFSApproach(graph, city, pathLength + 1, startingNode);
-
-            // Backtrack: Restore the state of currentPath
-            currentPath.pop_back();
+            currentPath.pop_back(); // Backtrack: Restore the state of currentPath
             currentCost -= graph.edges[currentNode][city];
         }
         visited[currentNode] = false;

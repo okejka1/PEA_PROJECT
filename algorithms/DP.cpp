@@ -55,7 +55,6 @@ int DP::heldKarpAlg(int mask, int fullVisit, int currentPos, int startPos, Graph
         }
     }
     return dp[mask][currentPos] = minLocal;
-
 }
 
 void DP::backtrack(std::vector<std::vector<int>> &parent, int start) {
