@@ -5,7 +5,7 @@
 #include "fstream"
 #include "iostream"
 #include "iomanip"
-
+using namespace std;
 Graph::Graph(int v){
     vertices = v;
     edges = new int * [vertices];
@@ -50,36 +50,56 @@ void Graph::changeSize(int size) {
     }
 }
 
-void Graph::readGraphDirected(const std::string& s){
-    std::string name = R"(..\input\)" + s;
-    std::ifstream file(name);
+void Graph::readGraphDirected(const std::string &s) {
+    string name = R"(..\input\)" + s;
+    ifstream file(name);
+
+
     if(file.is_open()) {
-        std::string line;
-        std::vector<int> lineData;
+        string line;
+        vector<int> lineData;
 
-        std::getline(file, line);
-        if(std::stoi(line) != vertices)
-            Graph::changeSize(std::stoi(line));
 
-        int i = 0;
-        while(std::getline(file, line)){
-            std::stringstream lineStream(line);
-            int value;
-            while (lineStream >> value)
-                lineData.push_back(value);
-            if(lineData.size() == vertices){
-                std::copy(lineData.begin(), lineData.end(), edges[i]);
-                i++;
-                lineData.clear();
-            }
-
+        for(int i =0; i < 4; i++){
+            getline(file,line);
+        }
+        string numerToString;
+        for(char c : line){
+            if(isdigit(c))
+                numerToString += c;
         }
 
-        file.close();
-    }
-    else std::cout << "\nTHERE WAS A PROBLEM WITH OPENING FILE";
-}
+        int dimension;
+        dimension = stoi(numerToString);
 
+
+        if(dimension != vertices)
+            changeSize(dimension);
+        cout << "dimension = " << dimension << endl;
+        cout << "vertices = " << vertices << endl;
+
+        int i = 0;
+        while(getline(file,line)) {
+            stringstream lineStream(line);
+            int value;
+            while(lineStream >> value) {
+                lineData.push_back(value);
+                if(lineData.size() == vertices) {
+                    copy(lineData.begin(), lineData.end(), edges[i]);
+                    i++;
+                    lineData.clear();
+                }
+            }
+        }
+        cout << "Read completed from " <<  s  << "\n\n";
+
+        file.close();
+    } else
+        cout << "There was a problem with opening your file\n\n";
+
+
+
+}
 void Graph::display() const{
 
     const int fieldWidth = 4;
