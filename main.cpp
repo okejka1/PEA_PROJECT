@@ -133,6 +133,7 @@ void menu() {
 #include <fstream>
 #include "structures/Graph.h"
 #include "algorithms/TabuSearch.h"
+#include "utils/Timer.h"
 
 
 using namespace std;
@@ -167,6 +168,17 @@ void test() {
     }
 
     graph.readGraphDirected(fileName);
+    Timer timer;
+    long long sekundy = 5000;
+
+    long long elapsedTime = 0;
+    timer.start();
+
+    while (elapsedTime < sekundy) {
+        elapsedTime = timer.mili();
+        cout << "Aktualny czas: " << elapsedTime << " ms" << endl;
+        timer.stop();  // Move timer.stop() inside the loop
+    }
 
 
 
@@ -308,8 +320,8 @@ void run() {
 
 }
 int main() {
-    run();
-//    test();
+   run();
+   //test();
 
     return 0;
 }

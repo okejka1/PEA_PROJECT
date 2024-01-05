@@ -12,7 +12,7 @@ std::pair<Solution, long> TabuSearch::apply(Graph &graph, int maxDurationInSecon
     Solution bestSolution = Solution::generateGreedySolution(graph);
     Solution currentSolution = bestSolution;
 
-    long bestSolutionTime = 0;
+    long long  bestSolutionTime = 0;
     std::random_device rd;
     std::mt19937 gen(rd());
     std::uniform_real_distribution<> dis(0.0, 1.0);
@@ -65,9 +65,9 @@ std::pair<Solution, long> TabuSearch::apply(Graph &graph, int maxDurationInSecon
                 tabulist.push(bestSolution.move.first, bestSolution.move.second);
             }
         }
-        timer.stop();
         iterationsSinceChange++;
         iteration++;
+        timer.stop();
     }
     timer.stop();
     std::cout << "Final solution: ";

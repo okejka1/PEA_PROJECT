@@ -22,6 +22,6 @@ long Timer::micro(){
     return duration_cast<microseconds>(end - beginning).count();
 }
 
-long Timer::mili() {
+long long int Timer::mili() {
     return duration_cast<milliseconds>(end - beginning).count();
 }

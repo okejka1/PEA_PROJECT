@@ -14,7 +14,8 @@ public:
     void stop();
     long nano();
     long micro();
-    long mili();
+    long long mili();
+
 private:
     high_resolution_clock::time_point beginning;
     high_resolution_clock::time_point end;
