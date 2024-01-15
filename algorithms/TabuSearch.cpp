@@ -7,7 +7,7 @@
 #include "TabuSearch.h"
 TabuList TabuSearch::tabulist(48);  // Define the static member variable
 
-std::pair<Solution, long> TabuSearch::apply(Graph &graph, int maxDurationInSeconds, int neighbourMethod, int maxIterations) {
+std::pair<Solution, long long> TabuSearch::apply(Graph &graph, int maxDurationInSeconds, int neighbourMethod, int maxIterations) {
     tabulist.clear();
     Solution bestSolution = Solution::generateGreedySolution(graph);
     Solution currentSolution = bestSolution;

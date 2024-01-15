@@ -15,7 +15,7 @@ class TabuSearch {
 
 public:
     static TabuList tabulist;
-    static std::pair<Solution,long> apply(Graph &graph, int timeInSeconds, int neigbourhoodMethod, int maxIterations);
+    static std::pair<Solution,long long > apply(Graph &graph, int timeInSeconds, int neigbourhoodMethod, int maxIterations);
 };
 
 
